@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CS9-jF-Ljp">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1202"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1502"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xiT-Er-5cN">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1202"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1502"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-Wg-U2G">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
@@ -54,8 +55,15 @@
                                                             <constraint firstItem="yFa-3N-tQu" firstAttribute="leading" secondItem="hdU-Wg-U2G" secondAttribute="leading" constant="20" id="i7o-nD-NFa"/>
                                                         </constraints>
                                                     </view>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jia-Ke-i0k">
+                                                        <rect key="frame" x="0.0" y="200" width="393" height="300"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="300" id="O3m-ZV-Meh"/>
+                                                        </constraints>
+                                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                                    </mapView>
                                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eo9-G5-zW9">
-                                                        <rect key="frame" x="0.0" y="200" width="393" height="400"/>
+                                                        <rect key="frame" x="0.0" y="500" width="393" height="400"/>
                                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="nDV-Aa-H4E"/>
@@ -66,14 +74,14 @@
                                                         </wkWebViewConfiguration>
                                                     </wkWebView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrari" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-GQ-ToP">
-                                                        <rect key="frame" x="0.0" y="600" width="393" height="600"/>
+                                                        <rect key="frame" x="0.0" y="900" width="393" height="600"/>
                                                         <color key="backgroundColor" systemColor="linkColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="600" id="ApQ-9F-ZQv"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-Km-60Z">
-                                                        <rect key="frame" x="0.0" y="1200" width="393" height="2"/>
+                                                        <rect key="frame" x="0.0" y="1500" width="393" height="2"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="bNh-1a-Uf1"/>
@@ -112,6 +120,7 @@
                     <connections>
                         <outlet property="myButton" destination="yFa-3N-tQu" id="2hR-WP-afh"/>
                         <outlet property="myImageView" destination="n9p-GQ-ToP" id="YeA-ba-f64"/>
+                        <outlet property="myMapView" destination="jia-Ke-i0k" id="lKA-6q-Bh0"/>
                         <outlet property="myView" destination="hdU-Wg-U2G" id="pMM-AX-TWJ"/>
                         <outlet property="myWebView" destination="eo9-G5-zW9" id="LZK-2O-K3j"/>
                     </connections>
