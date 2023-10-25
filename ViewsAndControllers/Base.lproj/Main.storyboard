@@ -49,6 +49,13 @@
                                     <constraint firstAttribute="height" constant="2" id="bNh-1a-Uf1"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrari" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-GQ-ToP">
+                                <rect key="frame" x="0.0" y="261" width="393" height="250"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ApQ-9F-ZQv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,10 +65,14 @@
                             <constraint firstItem="hdU-Wg-U2G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GqP-8N-eDo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dLu-Km-60Z" secondAttribute="trailing" id="QAT-ly-Icn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdU-Wg-U2G" secondAttribute="trailing" constant="2" id="VHU-TZ-MEg"/>
+                            <constraint firstItem="n9p-GQ-ToP" firstAttribute="top" secondItem="dLu-Km-60Z" secondAttribute="bottom" id="abJ-Ye-ceK"/>
                             <constraint firstItem="dLu-Km-60Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bLB-Mj-6gp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n9p-GQ-ToP" secondAttribute="trailing" id="eLg-r6-Pn1"/>
+                            <constraint firstItem="n9p-GQ-ToP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egs-X8-J0A"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myImageView" destination="n9p-GQ-ToP" id="YeA-ba-f64"/>
                         <outlet property="myView" destination="hdU-Wg-U2G" id="pMM-AX-TWJ"/>
                     </connections>
                 </viewController>
@@ -71,6 +82,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ferrari" width="2560" height="1616"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
