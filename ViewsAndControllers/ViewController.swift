@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
+        title = "Titulo de View Controller"
+        
         myButton.backgroundColor = .green
         myButton.tintColor = .black
         
