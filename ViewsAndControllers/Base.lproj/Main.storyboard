@@ -134,18 +134,47 @@
         <!--Item 2-->
         <scene sceneID="dSR-Gu-mue">
             <objects>
-                <viewController storyboardIdentifier="vcGreen" id="7pm-TT-H6a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vcGreen" id="7pm-TT-H6a" customClass="GreenViewController" customModule="ViewsAndControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5tX-BL-KlD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kRH-mu-qW3">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7pm-TT-H6a" id="Jv0-rq-bJI"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-t8-Lmx">
+                                <rect key="frame" x="151.66666666666666" y="415.66666666666669" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Cfr-tD-sYe"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="e5h-t8-Lmx" firstAttribute="centerY" secondItem="5tX-BL-KlD" secondAttribute="centerY" id="IvJ-KU-U3p"/>
+                            <constraint firstItem="e5h-t8-Lmx" firstAttribute="centerY" secondItem="5tX-BL-KlD" secondAttribute="centerY" id="SmH-mi-eXS"/>
+                            <constraint firstItem="kRH-mu-qW3" firstAttribute="leading" secondItem="Cfr-tD-sYe" secondAttribute="leading" id="cbT-8M-asW"/>
+                            <constraint firstItem="kRH-mu-qW3" firstAttribute="trailing" secondItem="Cfr-tD-sYe" secondAttribute="trailing" id="dp6-ES-qrN"/>
+                            <constraint firstItem="kRH-mu-qW3" firstAttribute="top" secondItem="Cfr-tD-sYe" secondAttribute="top" id="hZj-3z-PFg"/>
+                            <constraint firstItem="e5h-t8-Lmx" firstAttribute="centerX" secondItem="5tX-BL-KlD" secondAttribute="centerX" id="pco-vQ-Hty"/>
+                            <constraint firstItem="e5h-t8-Lmx" firstAttribute="centerX" secondItem="5tX-BL-KlD" secondAttribute="centerX" id="qZS-th-e0J"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="gnD-G6-eax"/>
+                    <connections>
+                        <outlet property="myLabelSearch" destination="e5h-t8-Lmx" id="oir-3Z-qCx"/>
+                        <outlet property="mySearchBar" destination="5tX-BL-KlD" id="YTD-mI-R0r"/>
+                        <outlet property="myUISearchBar" destination="kRH-mu-qW3" id="YWW-gL-fC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLL-ea-m3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="-12"/>
+            <point key="canvasLocation" x="1275.5725190839694" y="-12.67605633802817"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="DjM-yG-TVs">
